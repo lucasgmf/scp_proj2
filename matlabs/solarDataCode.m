@@ -79,7 +79,7 @@ disp(['Area needed: ', num2str(PVarea), ' m² of PV']);
 
 % average water flow 
 waterFlowPerHour = totalWeighWaterVolume / 24;
-waterFlowPerSecond = waterFlowPerHour / 3600;
+waterFlowPerSecond = waterFlowPerHour / 3600
 pumpPerfomance = 0.8;
 
 waterDens = 997; % kg/m³

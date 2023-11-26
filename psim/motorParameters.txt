@@ -1,0 +1,16 @@
+// Torque calculations
+totalWeighWaterVolume = 30; // m³
+g = 9.81;
+// waterHeight = 20; // m
+
+//waterFlowPerSecond = totalWeighWaterVolume / (24*3600)
+pumpPerfomance = 0.8
+waterDens = 997; // kg/m³
+waterFlowPerSec = 3.4722e-04
+
+shaftTimeConstant = 0.006 // default
+
+
+k =  waterDens * g / (pumpPerfomance)
+
+
