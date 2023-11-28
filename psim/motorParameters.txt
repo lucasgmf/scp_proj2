@@ -8,7 +8,4 @@ pumpPerfomance = 0.8
 waterDens = 997; // kg/m³
 waterFlowPerSec = 3.4722e-04
 
-shaftConstantTime = 0.006 // default
-
-
 k =  waterDens * g / (pumpPerfomance)
