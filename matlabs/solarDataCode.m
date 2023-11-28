@@ -96,7 +96,7 @@ powerEngineShaft = torque * motorSpeedRadS; % Watts
 % earlier
 powerEngineShaft * 0.8;
 
-%% Load in the pump
+%% Average load in the pump
 %! Not 
 % necessary time from motor off to nominal
 startingTimeNominal = 5; 
@@ -135,3 +135,20 @@ grid on;
 % Set custom limits for the x-axis and y-axis
 xlim([0 timeLimitLoadSignal]); % Set x-axis limits from 0 to 24
 ylim([0 torque*1.1]);  % Set y-axis limits from 0 to 5 (adjust as needed)
+
+%% Calculation Centrifugal Pump Flow Rate 
+
+% value obtained early
+averageWaterRate = waterFlowPerHour; % m³/h
+
+% https://www.rotechpumps.com/centrifugal-pump-flow-rate/
+
+% size of the impeler. Affects the pumpas ability to generate flow
+impelerDiameter = 0.5; % m
+
+% energy imparted by the pump to the fluid
+head = 20; % m, Worst case scenario
+
+
+averageFlowRate = (pi * impelerDiameter^2 * motorSpeedRPM * head) / (4 * g); % L/
+averageFlowRate / 3600
