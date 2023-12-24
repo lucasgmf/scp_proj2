@@ -38,7 +38,7 @@ xlim([0 24]); % Set x-axis limits from 0 to 24
 ylim([0 14]);  % Set y-axis limits from 0 to 5 (adjust as needed)
 
 % Display the average solar irradiation
-disp(['Actual average solar irradiation: ', num2str(trapz(time, solarData) / 24), ' kWh/m² per day']);
+disp(['Actual average solar irradiation: ', num2str(trapz(time, solarData)/24 ), ' kWh/m² per hour']);
 
 % num2str(trapz(time, solar_data) / 24 -> (cast num para string) Calculo da area da curva / 24!
 
@@ -56,7 +56,7 @@ plot(time, PVdata, 'LineWidth',2);
 PVperfomance = 0.15;
 
 PVWattDay = trapz(time, PVdata) * PVperfomance;
-PVjoulesDay = PVWattDay * 3600 * 24;
+PVjoulesDay = PVWattDay * 3600 * 24
 disp(['PV m²*day: ', num2str(PVjoulesDay), ' Joules']);
 %% Energy needed
 
@@ -67,7 +67,7 @@ height = 20; % m
 
 bombPerfomance = 1; % Still need to be dimensioned
 
-energyNeededToApply = totalWeighWaterKg * g * height / bombPerfomance;
+energyNeededToApply = totalWeighWaterKg * g * height / bombPerfomance
 disp(['Energy needed: ', num2str(energyNeededToApply), ' Joules per day (with 100% performance)']);
 % maybe dimension this value to a higher value!!!!
 %% Getting area of PV 
